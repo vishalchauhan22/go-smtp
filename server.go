@@ -178,7 +178,7 @@ func (s *Server) handleConn(c *Conn) error {
 //
 // If s.Addr is blank and LMTP is disabled, ":smtp" is used.
 func (s *Server) ListenAndServe() error {
-	network := "tcp"
+	network := "tcp4"
 	if s.LMTP {
 		network = "unix"
 	}
